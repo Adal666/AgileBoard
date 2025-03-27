@@ -1,8 +1,17 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import HomePage from "./pages/HomePage"
+import NuevoProyecto from "./pages/NuevoProyecto"
+import ListaProyectos from "./pages/ListaProyectos"
+
 function App() {
   return (
-    <div className="min-h-screen bg-red-500 text-white">
-      Hola AgileBoard con Tailwind v4
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/nuevo-proyecto" element={<NuevoProyecto />} />
+        <Route path="/proyectos" element={<ListaProyectos />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
